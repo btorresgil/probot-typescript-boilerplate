@@ -1,0 +1,59 @@
+{
+  "name": "probot-typescript-boilerplate",
+  "version": "0.1.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "repository": "",
+  "homepage": "",
+  "bugs": "",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "nodemon --exec \"npm start\"",
+    "start": "probot run ./lib/index.js",
+    "lint": "standard **/*.ts --fix",
+    "test": "jest && standard **/*.ts",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "nock": "^11.3.5",
+    "@types/nock": "^11.1.0",
+    "probot": "^9.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.8",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.2",
+    "prettier": "^1.18.2",
+    "smee-client": "^1.1.0",
+    "standard": "^14.3.1",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ],
+    "ecmaVersion": 2018,
+    "env": [
+      "es6",
+      "node",
+      "jest"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
